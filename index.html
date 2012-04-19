@@ -11,9 +11,10 @@
     <meta content="false" id="twcClient" name="twcClient" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" href="css/style.css" />
-    <link id="css" rel="stylesheet" href="" />
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="js/index.js"></script>
+    <link id="css" rel="stylesheet" href="css/style1.css" />
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         //读取localStorage进行页面风格选择
         styleChange();
@@ -902,7 +903,7 @@ $('#changeStyleContent').delegate('.style', 'click', function(e){
     }, 200);
 });
 
-setStyleOn(parseInt(localStorage.css, 10));
+setStyleOn(parseInt(localStorage.css, 10) || 1);
 
 
 
