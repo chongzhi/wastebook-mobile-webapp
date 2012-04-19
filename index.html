@@ -1,0 +1,911 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="1 days" name="revisit-after" /> 
+    <meta content="" name="keywords" /> 
+    <meta content="" name="description" /> 
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <meta content="false" id="twcClient" name="twcClient" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link id="css" rel="stylesheet" href="" />
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        //读取localStorage进行页面风格选择
+        styleChange();
+    </script>
+	<title>首页</title>
+</head>
+
+<body>
+
+    <div id="nav" class="nav">
+        <ul>
+            <li data-trigger="nav" data-nav="index" class="on"><a href="javascript:;"><span>首页</span></a></li>
+            <li data-trigger="nav" data-nav="turnoverList" ><a href="javascript:;"><span>流水</span></a></li>
+            <li data-trigger="nav" data-nav="account" ><a href="javascript:;"><span>账户</span></a></li>
+            <li data-trigger="nav" data-nav="report" ><a href="javascript:;"><span>报表</span></a></li>
+            <li class="change" id="changeStyle"><a href="#" id=""></a></li>
+        </ul>
+        <div class="change-style" id="changeStyleContent">
+            换个风格吧： 
+            <a href="#" data-value="1" class="style style1 on"></a>
+            <a href="#" data-value="2" class="style style2"></a>
+            <a href="#" data-value="3" class="style style3"></a>
+            <a href="#" data-value="4" class="style style4"></a> 
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <!-- 首页 -->
+        <div id="index" style="-webkit-transform: translate(0, 0);" class="page">
+            <div class="sum">
+                <h1>3月</h1>
+                <div id="space"></div>
+                <ul class="fs-16">
+                    <li>收入:<br />
+                    ￥8200.00</li>
+                    <li>支出:<br />
+                    ￥2338.50</li>
+                    <li>收支差额:<br />
+                    ￥5861.50</li>
+                </ul>
+            </div>
+            <div id="space"></div>
+            <div class="add">
+                <ul>
+                    <li>
+                        <a href="income.html?addIncome&0"><img alt="新增收入" src="images/add-icon_01.png" /><br/>
+                        新增收入</a>
+                    </li>
+                    <li>
+                        <a href="income.html?addPay&1"><img alt="新增支出" src="images/add-icon_02.png" /><br/>
+                        新增支出</a>
+                    </li>
+                    <li>
+                        <a href="income.html?addTransfer&2"><img alt="新增转账" src="images/add-icon_03.png" /><br/>
+                        新增转账</a>
+                    </li>
+                </ul>
+            </div>  
+            <div id="space"></div> 
+            <div class="total">
+                <ul class="fs-16">
+                    <li>总资产:<br />
+                    ￥80000.00</li>
+                    <li>负资产:<br />
+                    ￥2500.00</li>
+                    <li>净资产:<br />
+                    ￥77500.00</li>
+                </ul>
+            </div>
+            <div class="accountlist">
+                <ul>
+                    <li class="list1" data-value="cash">
+                        <a href="javascript:;">
+                            <div class="left"><span class="accoutname">现金</span></div>
+                            <div class="right">
+                                <span class="money">￥3500.00</span>
+                                <span class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list2" data-value="card">
+                        <a href="javascript:;">
+                            <div class="left"><span class="accoutname">银行卡</span></div>
+                            <div class="right">
+                                <span class="money">￥75000.00</span>
+                                <span class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list3" data-value="creditcard">
+                        <a href="javascript:;">
+                            <div class="left"><span class="accoutname">信用卡</span></div>
+                            <div class="right">
+                                <span class="money">￥2500.00</span>
+                                <span class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list4" data-value="alipay">
+                        <a href="javascript:;">
+                            <div class="left">
+                                <span class="accoutname">支付宝</span></div>
+                            <div class="right">
+                                <span class="money">￥1500.00</span>
+                                <span class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /首页 -->
+        
+        <!-- 流水 -->
+        <div id="turnoverList" style="-webkit-transform: translate(100%, 0);"  class="page">
+            <div class="month">
+                <a href="#" class="openMonth">
+                    <ul class="bg">
+                        <li><i data-trigger="trigger" class="icon-minus"></i></li>
+                        <li>3月</li>
+                        <li>收:￥82000.00</li>
+                        <li>支:￥233800.50</li>
+                    </ul>
+                </a> 
+            <div class="category">
+                <ul>
+                    <li class="gongzi li"> 
+                        <a href="#" class="openCategory">
+                        <i class="gz-icon"></i> 
+                           <div class="left">
+                                <span class="accoutname">工资</span><br />
+                                <span class="date">2012-03-27</span>
+                                <span class="remark">本月工资</span>
+                            </div>
+                            <div class="right">
+                                <span class="money red">￥8000.00</span><span data-trigger="trigger" class="arrow"></span>
+                            </div>
+                            </a>
+                        <div class="fold">
+                                <form>
+                                    <ul class="form-list sub-list">
+                                        <li>
+                                            <label>金额:</label> 
+                                            <input type="text" name="money" class="ipt" value="8000.00"/>
+                                        </li>
+                                        <li>
+                                            <label>账户:</label>
+                                            <select name="account" class="select">
+                                                <option value="xianjin">现金</option>
+                                                <option value="yinghang" selected="selected">银行卡</option>
+                                                <option value="xingyong">信用卡</option>
+                                                <option value="zhifu">支付宝</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label>类别:</label> 
+                                            <select name="category" class="select">
+                                                <option value="gongzi" selected="selected">工资</option>
+                                                <option value="jiangjin">奖金</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label>时间:</label>
+                                            <input type="date" class="ipt"  name="date" value="2012-03-27" />
+                                        </li>
+                                        <li>
+                                            <label>备注:</label>
+                                               <textarea class="ipt" style="height: 100px;">本月工资</textarea>
+                                        </li>
+                                        <li>
+        
+                                            <button type="submit" class="button">保存</button>
+                                            <button type="button" class="button cancel">取消</button>
+                                        </li>
+                                    </ul>
+                                </form>
+                        </div>
+                    </li>
+                    <li class="canyin li">
+                       <a href="#" class="openCategory">
+                        <i class="cy-icon"></i> 
+                           <div class="left">
+                                <span class="accoutname">餐饮</span><br />
+                                <span class="date">2012-03-26</span>
+                                <span class="remark">知味观</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥12.50</span><span data-trigger="trigger" class="arrow"></span>
+                            </div>
+                        </a>
+                         <div class="fold">
+                                <form>
+                                    <ul class="form-list sub-list">
+                                        <li>
+                                            <label>金额:</label> 
+                                            <input type="text" name="money" class="ipt" value="8000.00"/>
+                                        </li>
+                                        <li>
+                                            <label>账户:</label>
+                                            <select name="account" class="select">
+                                                <option value="xianjin">现金</option>
+                                                <option value="yinghang" selected="selected">银行卡</option>
+                                                <option value="xingyong">信用卡</option>
+                                                <option value="zhifu">支付宝</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label>类别:</label> 
+                                            <select name="category" class="select">
+                                                <option value="gongzi" selected="selected">工资</option>
+                                                <option value="jiangjin">奖金</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label>时间:</label>
+                                            <input type="date" class="ipt"  name="date" value="2012-03-27" />
+                                        </li>
+                                        <li>
+                                            <label>备注:</label>
+                                               <textarea class="ipt" style="height: 100px;">本月工资</textarea>
+                                        </li>
+                                        <li>
+                                            <button type="submit" class="button">保存</button>
+                                            <button type="button" class="button cancel">取消</button>
+                                        </li>
+                                    </ul>
+                                </form>
+                        </div>
+                    </li>
+                    <li class="yvle li">
+                       <a href=""  class="openCategory">
+                            <i class="yvl-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">娱乐</span><br />
+                                <span class="date">2012-03-25</span>
+                                <span class="remark">翠苑电影院</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥278.00</span><span data-trigger="trigger" class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="yiliao  li">
+                       <a href="#" class="openCategory">
+                           <i class="yl-icon"></i> 
+                           <div class="left">
+                                <span class="accoutname">医疗</span><br />
+                                <span class="date">2012-03-24</span>
+                                <span class="remark">同德医院</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥250.00</span><span data-trigger="trigger" class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="tongxun li">
+                       <a href="#" class="openCategory">
+                           <i class="tx-icon"></i> 
+                           <div class="left">
+                                <span class="accoutname">通讯</span><br />
+                                <span class="date">2012-03-23</span>
+                                <span class="remark">手机充值</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥50.00</span><span data-trigger="trigger" class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="jiaotong li">
+                       <a href="#" class="openCategory">
+                       <i class="jt-icon"></i> 
+                       <div class="left">
+                            <span class="accoutname">交通</span><br />
+                            <span class="date">2012-03-22</span>
+                            <span class="remark">加油</span>
+                        </div>
+                        <div class="right">
+                            <span class="money">￥500.00</span><span data-trigger="trigger" class="arrow"></span>
+                        </div></a>
+                    </li>
+                    <li class="wuye li">
+                       <a href="#" class="openCategory">
+                           <i class="wy-icon"></i> 
+                           <div class="left">
+                                <span class="accoutname">物业</span><br />
+                                <span class="date">2012-03-21</span>
+                                <span class="remark">水电费</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥298.00</span><span data-trigger="trigger" class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="xuexi  li">
+                       <a href="#" class="openCategory">
+                       <i class="xx-icon"></i> 
+                       <div class="left">
+                            <span class="accoutname">学习</span><br />
+                            <span class="date">2012-03-20</span>
+                            <span class="remark">设计中的设计</span>
+                        </div>
+                        <div class="right">
+                            <span class="money">￥250.00</span><span data-trigger="trigger" class="arrow"></span>
+                        </div></a>
+                    </li>
+                    <li class="qita li">
+                        <a href="#" class="openCategory">
+                       <i class="qt-icon"></i> 
+                       <div class="left">
+                            <span class="accoutname">其他</span><br />
+                            <span class="date">2012-03-19</span>
+                            <span class="remark">母亲节礼物</span>
+                        </div>
+                        <div class="right">
+                            <span class="money">￥500.00</span><span data-trigger="trigger" class="arrow"></span>
+                        </div></a>
+                    </li>
+                    <li class="fushi li">
+                        <a href="#" class="openCategory">
+                       <i class="fs-icon"></i> 
+                       <div class="left">
+                            <span class="accoutname">服饰</span><br />
+                            <span class="date">2012-03-18</span>
+                            <span class="remark">连衣裙</span>
+                        </div>
+                        <div class="right">
+                            <span class="money">￥200.00</span><span data-trigger="trigger" class="arrow"></span>
+                        </div></a>
+                    </li>
+                    <li class="jiangjin li">
+                        <a href="#" class="openCategory">
+                       <i class="jj-icon"></i> 
+                       <div class="left">
+                            <span class="accoutname">奖金</span><br />
+                            <span class="date">2012-03-17</span>
+                            <span class="remark">福利彩票</span>
+                        </div>
+                        <div class="right">
+                            <span class="money red">￥200.00</span><span data-trigger="trigger" class="arrow"></span>
+                        </div></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div class="month">
+                <a href="#"  class="openMonth">
+                    <ul class="bg">
+                        <li><i data-trigger="trigger"  class="icon-plus"></i></li>
+                        <li>2月</li>
+                        <li>收：￥8200.00</li>
+                        <li>支：￥3345.00</li>
+                    </ul>
+                </a>
+                <div class="category" style="display:none;">
+                    <ul>
+                        <li class="zhuanzhang li">
+                            <a href="#" class="openCategory">
+                           <i class="zz-icon"></i> 
+                           <div class="left">
+                                <span class="accoutname">现金->银行卡</span><br />
+                                <span class="date">2012-03-16</span>
+                                <span class="remark">转了个账</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥200.00</span><span data-trigger="trigger" class="arrow"></span>
+                            </div></a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+            
+            <div class="month">
+                <a href="#" class="openMonth">
+                    <ul class="bg">
+                        <li><i data-trigger="trigger"  class="icon-plus"></i></li>
+                        <li>1月</li>
+                        <li>收：￥8000.00</li>
+                        <li>支：￥2980.00</li>
+                    </ul>
+                </a>
+        
+                <div class="category" style="display:none;">
+                    <ul>
+                        <li class="zhuanzhang li">
+                            <a href="#" class="openCategory">
+                           <i class="zz-icon"></i> 
+                           <div class="left">
+                                <span class="accoutname">现金->银行卡</span><br />
+                                <span class="date">2012-03-16</span>
+                                <span class="remark">转了个账</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥200.00</span><span data-trigger="trigger" class="arrow"></span>
+                            </div></a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>  
+        </div>
+        <!-- /流水 -->
+        
+        <!-- 帐户 -->
+        <div id="account"  style="-webkit-transform: translate(200%, 0);" class="page">
+            <div class="total">
+                <ul>
+                    <li>总资产:<br />
+                    ￥80000.00</li>
+                    <li>负资产:<br />
+                    ￥2500.00</li>
+                    <li>净资产:<br />
+                    ￥77500.00</li>
+                </ul>
+            </div>
+            <div class="accountlist">
+                <ul>
+                    <li class="list1" data-value="cash">
+                        <a href="javascript:;">
+                            <div class="left"><span class="accoutname">现金</span></div>
+                            <div class="right">
+                                <span class="money">￥3500.00</span>
+                                <span class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list2" data-value="card">
+                        <a href="javascript:;">
+                            <div class="left"><span class="accoutname">银行卡</span></div>
+                            <div class="right">
+                                <span class="money">￥75000.00</span>
+                                <span class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list3" data-value="creditcard">
+                        <a href="javascript:;">
+                            <div class="left"><span class="accoutname">信用卡</span></div>
+                            <div class="right">
+                                <span class="money">￥2500.00</span>
+                                <span class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list4" data-value="alipay">
+                        <a href="javascript:;">
+                            <div class="left">
+                                <span class="accoutname">支付宝</span></div>
+                            <div class="right">
+                                <span class="money">￥1500.00</span>
+                                <span class="arrow"></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="line"></div>
+            
+            <div style="padding: 15px;">
+                <input type="button" id="addAccount" class="sbutton" value="新增账户" />
+            </div>
+            <div class="addaccount" id="addAccountContent" style="display:none;">
+                <form>
+                    <ul class="form-list">
+                        <li>
+                            <label>账户名称:</label> 
+                            <input type="text" class="ipt" name="money" />
+                        </li>
+                        <li>
+                            <label>账户金额:</label> 
+                            <input type="text" class="ipt"  name="money" /><br />
+                        </li>
+                        <li>
+                            <input type="submit" class="button" value="保存" />
+                            <input type="button" class="button" id="cancel" value="取消" />
+                        </li>
+                  </ul>
+                </form>
+            </div>
+        </div>
+        <!-- /帐户 -->
+        
+        <!-- 帐户详情 -->
+        <div id="sort" style="-webkit-transform: translate(300%, 0);" class="page">
+            <div class="sort">
+                <a href="#" id="editAccount">
+                    <ul class="bg">
+                        <li class="fl-left" style="font-size: 20px;">现金</li>
+                        
+                        <li class="fl-right" ><i id="arrowIcon" class="icon-arrow"></i></li>
+                        <li class="fl-right" style="margin-right: 10px;">￥3500.00</li>
+                    </ul>
+                </a> 
+
+                <ul class="form-list" id="editAccountContent" style="padding-top: 20px; display:none; ">
+                        <li>
+                            <label>修改金额:</label> 
+                            <input type="text" class="ipt" name="money" />
+                        </li>
+                        
+                        <li>
+                            <input type="submit" class="button" value="保存" />
+                            <input type="button" class="button" id="editCancel" value="取消" />
+                        </li>
+                  </ul>
+
+            </div>
+        
+            <h3>2012-03-26</h3>
+            <div class="category">
+                <ul>
+                    <li class="canyin li">
+                        <a>
+                            <i class="cy-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">餐饮</span><br />
+                                <span class="date">2012-03-26</span>
+                                <span class="remark">知味观</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥12.50</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="yvle li">
+                        <a>
+                            <i class="yvl-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">娱乐</span><br />
+                                <span class="date">2012-03-26</span>
+                                <span class="remark">翠苑电影院</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥278.00</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+            <h3>2012-03-24</h3>
+            <div class="category">
+                <ul>
+                    <li class="yiliao li">
+                        <a>
+                            <i class="yl-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">医疗</span><br />
+                                <span class="date">2012-03-24</span>
+                                <span class="remark">同德医院</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥250.00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="tongxun li">
+                        <a>
+                            <i class="tx-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">通讯</span><br />
+                                <span class="date">2012-03-24</span>
+                                <span class="remark">手机充值</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥50.00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="jiaotong li">
+                        <a>
+                            <i class="jt-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">交通</span><br />
+                                <span class="date">2012-03-24</span>
+                                <span class="remark">加油</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥500.00</span>
+                            </div>
+                        </a>
+                    </li> 
+                </ul>
+            </div>
+        
+            <h3>2012-03-21</h3>
+            <div class="category">
+                <ul>
+                    <li class="wuye li">
+                        <a>
+                            <i class="wy-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">物业</span><br />
+                                <span class="date">2012-03-22</span>
+                                <span class="remark">水电费</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥298.00</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+            <h3>2012-03-20</h3>
+            <div class="category">
+                <ul>
+                    <li class="xuexi li">
+                        <a>
+                            <i class="xx-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">学习</span><br />
+                                <span class="date">2012-03-20</span>
+                                <span class="remark">设计中的设计</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥250.00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="qita li">
+                        <a>
+                            <i class="qt-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">其他</span><br />
+                                <span class="date">2012-03-20</span>
+                                <span class="remark">母亲节礼物</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥500.00</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+            <h3>2012-03-18</h3>
+            <div class="category">
+                <ul>
+                    <li class="fushi li">
+                        <a>
+                            <i class="fs-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">服饰</span><br />
+                                <span class="date">2012-03-18</span>
+                                <span class="remark">连衣裙</span>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥200.00</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /帐户详情 -->
+        
+        <div id="report"  style="-webkit-transform: translate(400%, 0);" class="page">
+            
+            <div class="category category-ex">
+                <ul>
+                    <li class="canyin li">
+                        <a>
+                            <i class="cy-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">餐饮</span><br />
+                                <div class="bar"><div class="process process-cy" style="width:100%"></div></div>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥12.50</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="yvle li">
+                        <a>
+                            <i class="yvl-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">娱乐</span><br />
+                               <div class="bar"><div class="process process-yvl" style="width:90%"></div></div>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥278.00</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+            
+            <div class="category category-ex">
+                <ul>
+                    <li class="yiliao li">
+                        <a>
+                            <i class="yl-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">医疗</span><br />
+                                <div class="bar"><div class="process process-yl" style="width:80%"></div></div>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥250.00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="tongxun li">
+                        <a>
+                            <i class="tx-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">通讯</span><br />
+                                <div class="bar"><div class="process process-tx" style="width:70%"></div></div>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥50.00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="jiaotong li">
+                        <a>
+                            <i class="jt-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">交通</span><br />
+                                <div class="bar"><div class="process process-jt" style="width:60%"></div></div>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥500.00</span>
+                            </div>
+                        </a>
+                    </li> 
+                </ul>
+            </div>
+        
+           
+            <div class="category category-ex">
+                <ul>
+                    <li class="wuye li">
+                        <a>
+                            <i class="wy-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">物业</span><br />
+                                <div class="bar"><div class="process process-wy" style="width:50%"></div></div>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥298.00</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+            
+            <div class="category category-ex">
+                <ul>
+                    <li class="xuexi li">
+                        <a>
+                            <i class="xx-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">学习</span><br />
+                                <div class="bar"><div class="process process-xx" style="width:40%"></div></div>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥250.00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="qita li">
+                        <a>
+                            <i class="qt-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">其他</span><br />
+                                <div class="bar"><div class="process process-qt" style="width:30%"></div></div>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥500.00</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+           
+            <div class="category category-ex">
+                <ul>
+                    <li class="fushi li">
+                        <a>
+                            <i class="fs-icon"></i> 
+                            <div class="left">
+                                <span class="accoutname">服饰</span><br />
+                                <div class="bar"><div class="process process-fs" style="width:20%"></div></div>
+                            </div>
+                            <div class="right">
+                                <span class="money">￥200.00</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+<script type="text/javascript">
+
+
+//excute
+toggleSubtree();
+toggleSubtree({
+    triggers: 'span[data-trigger=trigger]',
+    categorys: '.fold',
+    trigger: '.openCategory',
+    iconPlus: 'arrow',
+    iconMinus: 'arrow-down',
+    cancel: '.cancel'
+});
+
+
+
+
+//帐户里页面切换
+$('.accountlist').delegate('li', 'click', function(attribute){
+    var self = this;
+    togglePage('sort', $('#nav li:nth(2)'), function () {
+        console.log('id: ' + this.id);
+        console.log('data-value: ' + self.getAttribute('data-value'));
+
+        //这里是点击切换页面时候的回调函数，
+        //可进行页面预先数据渲染
+        //this是对要切换到的页面的dom节点引用，
+        //可直接this.innerHTML = 'xxx'，进行页面更新
+        //data-value是帐户点进去时带进去的参数，标识页面是“现金”或“银行卡”等等
+    });
+});
+
+
+
+
+//导航切换页面
+$('#nav').delegate('li[data-trigger=nav]', 'click', function(){
+    togglePage(this.getAttribute('data-nav'), this, function () {
+        console.log('id: ' + this.id);
+        
+        var id = this.id;
+        $('#report').unbind().bind('webkitTransitionEnd', function() {
+            if (id === 'report') {
+                $('#report .process').width('100%');
+            } else {
+                $('#report .process').width('1%');
+            }
+        });
+
+        //这里是点击切换页面时候的回调函数，
+        //可进行页面预先数据渲染
+        //this是对要切换到的页面的dom节点引用，
+        //可直接this.innerHTML = 'xxx'，进行页面更新
+    });
+});
+
+//取消按钮收起表单
+$('#addAccount, #cancel').on('click', function(){debugger;
+    $('#addAccountContent').slideToggle('normal');
+});
+
+$('#editAccount, #editCancel').on('click', function () {
+    $('#editAccountContent').slideToggle('normal');
+    $('#arrowIcon').toggleClass('icon-arrow-down');
+});
+
+
+
+//样式表切换
+
+$('#changeStyle').on('click', function(e){
+    e.preventDefault();
+    $('#changeStyle').toggleClass('change-down');
+    $('#changeStyleContent').toggleClass('change-style-down');
+});
+var itv;
+$('#changeStyleContent').delegate('.style', 'click', function(e){
+    e.preventDefault();
+    localStorage.css = this.getAttribute('data-value');
+    setStyleOn(styleChange());
+
+    clearTimeout(itv);
+    itv = setTimeout(function() {
+        $('#changeStyleContent').toggleClass('change-style-down');
+        $('#changeStyle').toggleClass('change-down');
+    }, 200);
+});
+
+setStyleOn(parseInt(localStorage.css, 10));
+
+
+
+</script>
+</body>
+</html>

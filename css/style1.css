@@ -1,0 +1,39 @@
+.nav ul li {
+    background:  -webkit-gradient(
+        linear,     /*渐变的类型*/
+        0 0,     /*渐变开始的X Y轴坐标*/
+        0 100%, /*渐变结束的X Y轴坐标*/
+        from(#33cc99),  /*开始的颜色*/
+        to(#339966)        /*结束的颜色*/
+        );
+}
+
+.nav ul li.change {
+    background-image:  -webkit-gradient(
+        linear,     /*渐变的类型*/
+        0 0,     /*渐变开始的X Y轴坐标*/
+        0 100%, /*渐变结束的X Y轴坐标*/
+        from(#3fac74),  /*开始的颜色*/
+        to(#297949)        /*结束的颜色*/
+        );
+}
+
+.nav {
+    border-bottom: 1px solid #336633;
+}
+
+.nav ul li a span {
+    border-right: 1px solid #2B5C21;
+    border-left: 1px solid #91D89F;
+}
+
+.add {
+
+    background:  -webkit-gradient(
+        linear,     /*渐变的类型*/
+        0 0,     /*渐变开始的X Y轴坐标*/
+        0 100%, /*渐变结束的X Y轴坐标*/
+        from(#33cc99),  /*开始的颜色*/
+        to(#339966)        /*结束的颜色*/
+        );
+}
