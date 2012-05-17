@@ -73,11 +73,15 @@ function togglePage (page, li, callback) {
  * 切换时设置页面的translate
  * @param {[type]} page [description]
  */
+
 function setSiblings (page) {
     //
-    //var winWidth = $(window).width();
 
-    page.css('webkitTransform', 'translate(0, 0)');
+    page.css({
+        'webkitTransform': 'translate(0, 0)',
+        'position': 'static'
+    });
+    
 
     //
     var i = 0;
@@ -85,6 +89,7 @@ function setSiblings (page) {
     while (act.length > 0 && act.hasClass('page')) {
         i++;
         act.css('webkitTransform', 'translate(-'+ i * 100 +'%, 0)');
+        act.css('position', 'absolute');
         act = act.prev();
     }
 
@@ -94,6 +99,7 @@ function setSiblings (page) {
     while (aft.length > 0 && aft.hasClass('page')) {
         j++;
         aft.css('webkitTransform', 'translate('+ j * 100 +'%, 0)');
+        aft.css('position', 'absolute');
         aft = aft.next();
     }
 }

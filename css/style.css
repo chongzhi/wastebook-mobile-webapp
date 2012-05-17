@@ -12,7 +12,11 @@ a {
 body{
     -webkit-text-size-adjust: none;
     font-size: 18px;
-    overflow-x: hidden;
+    
+}
+.wrapper {
+    position: relative;
+    overflow: hidden;
 }
 
 .page {
@@ -20,7 +24,7 @@ body{
     position: absolute;
     width: 100%;
     left: 0; 
-    top: 53px;
+    top: 0;
 }
 
 
@@ -114,11 +118,7 @@ h1,h2,h3,h4,h5,h6 {
 .nav ul li:nth-last-child(2) a span{
     border-right:none;
 }
-.wrapper {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
+
 
 .change-style {
     position: absolute;

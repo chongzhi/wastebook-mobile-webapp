@@ -3,18 +3,18 @@
         linear,     /*渐变的类型*/
         0 0,     /*渐变开始的X Y轴坐标*/
         0 100%, /*渐变结束的X Y轴坐标*/
-        from(red),  /*开始的颜色*/
-        to(#A20000)        /*结束的颜色*/
+        from(#ffcc99),  /*开始的颜色*/
+        to(#cc3300)        /*结束的颜色*/
         );
 }
 
 .nav ul li.change {
-    background-image: -webkit-gradient(
+    background:  -webkit-gradient(
         linear,     /*渐变的类型*/
         0 0,     /*渐变开始的X Y轴坐标*/
         0 100%, /*渐变结束的X Y轴坐标*/
-        from(#c90000),  /*开始的颜色*/
-        to(#720000)        /*结束的颜色*/
+        from(#e34e35),  /*开始的颜色*/
+        to(#990000)        /*结束的颜色*/
         );
 }
 
@@ -24,7 +24,7 @@
 
 .nav ul li a span {
     border-right: 1px solid #740000;
-    border-left: 1px solid #FF3F3F;
+    border-left: 1px solid #DBDBDB;
 }
 
 .add {
@@ -33,7 +33,19 @@
         linear,     /*渐变的类型*/
         0 0,     /*渐变开始的X Y轴坐标*/
         0 100%, /*渐变结束的X Y轴坐标*/
-        from(#FF6E6E),  /*开始的颜色*/
-        to(red)        /*结束的颜色*/
+        from(#ffcc99),  /*开始的颜色*/
+        to(#cc3300)        /*结束的颜色*/
         );
+}
+.accountlist ul li.list4 a {
+    border-left: 15px solid #ffcc99;
+}
+.accountlist ul li.list3 a {
+    border-left: 15px solid #e6674a;
+}
+.accountlist ul li.list2 a {
+    border-left: 15px solid #e34e35;
+}
+.accountlist ul li.list1 a {
+    border-left: 15px solid #cc3300;
 }

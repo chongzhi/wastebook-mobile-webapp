@@ -9,7 +9,7 @@
 }
 
 .nav ul li.change {
-    background-image:  -webkit-gradient(
+    background:  -webkit-gradient(
         linear,     /*渐变的类型*/
         0 0,     /*渐变开始的X Y轴坐标*/
         0 100%, /*渐变结束的X Y轴坐标*/
